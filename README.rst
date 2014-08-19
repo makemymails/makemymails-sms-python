@@ -14,7 +14,7 @@ Getting setup (one time)
 
 * Sign up on Makemymails `[1]`_ and note your username somewhere
 
-* Install Makemymails Android App `[2]_` and enter MMM username you used to register on the makemymails website.
+* Install Makemymails Android App `[2]`_  Enter MMM username you used to register on the makemymails website.
   (Press "Associate username" button to associate your device with Makemymails web account)
 
 * Visit http://www.makemymails.com/sms/api-details/ `[3]_`
@@ -23,7 +23,7 @@ Getting setup (one time)
   is unique to you.
 
 
-Steps with illustrations are available in this doc:
+Steps with illustrations are available in this doc `[4]`_
 
 
 Sending sms from python code
@@ -35,16 +35,17 @@ You can use import the *sendsms* function from makemymails after installing this
 
     MMM_API_KEY = 'AJK7G5J2KL6JGJU7'    # A unique API key is provided to you with
                                         # your Makemymails account. Keep this key safe.
-    DEVICE_ID = '18'            # A unique device id is assigned to each of your
-                                # device associated with your makemymails web account
-                                # You can see devide id for all id's the api details page above.
-    receiver = '9876534210'
+    DEVICE_ID = '18'                    # A unique device id is assigned to each of your
+                                        # device associated with your makemymails web account
+                                        # You can see devide id for all id's the api details page above.
+    receiver = '9876534210'             # Substitute accordingly.
+
     msg = 'This is a test sms from Makemymails SMS free API'
     from makemymails import sendsms
 
+    sendsms(send_to=receiver, sms_body=msg, MMM_API_KEY, DEVICE_ID)
     # If your phone is connected to the internet when this call is made message is
     # sent immediately else it is queued and sent.
-    sendsms(send_to=receiver, sms_body=msg, MMM_API_KEY, DEVICE_ID)
 
 
 Requirements
@@ -63,3 +64,4 @@ please make sure you install an sms pack before sending sms.
 .. _[1]: http://www.makemymails.com/accounts/signup/
 .. _[2]: https://play.google.com/store/apps/details?id=awsms.mmm
 .. _[3]: http://www.makemymails.com/sms/api-details/
+.. _[4]: https://docs.google.com/document/d/1JdFIQhPbDus5nBbYUpwgzAGdRoJsws6Z9rOjpRz3sVo/edit
