@@ -12,8 +12,8 @@ dependencies = ['requests', 'simplejson',]
 
 setup(
     name='makemymails',
-    version='0.0.1',
-    description='Makemymails Sms: Add sms sending capability to your webisite using your android device.',
+    version='0.0.2',
+    description='Makemymails sms: Add sms sending capability to your web app using android as an sms backend.',
     long_description=open('README.rst').read(),
     packages=['makemymails',],
     license='BSD',

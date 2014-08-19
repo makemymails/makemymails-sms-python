@@ -9,15 +9,23 @@ this library to send sms that is automatically routed via your android phone.
 Quickstart
 ==========
 
-Getting setup (one time)
-------------------------
+Installing library
+------------------
+
+    git clone git@github.com:makemymails/makemymails-sms-python.git
+    cd makemymails-sms-python
+    sudo python setup.py install
+
+
+Installing android backend and obtaining API key
+------------------------------------------------
 
 * Sign up on Makemymails `[1]`_ and note your username somewhere
 
 * Install Makemymails Android App `[2]`_  Enter MMM username you used to register on the makemymails website.
   (Press "Associate username" button to associate your device with Makemymails web account)
 
-* Visit http://www.makemymails.com/sms/api-details/ `[3]_`
+* Visit http://www.makemymails.com/sms/api-details/ `[3]`_
   This page contains the MMM_API_KEY which can be used with this library.
   Please  note it at a safe place and do not share it with anyone as the key
   is unique to you.
@@ -26,18 +34,17 @@ Getting setup (one time)
 Steps with illustrations are available in this doc `[4]`_
 
 
-Sending sms from python code
-----------------------------
+Sending sms from your python code
+---------------------------------
 
 You can use import the *sendsms* function from makemymails after installing this package.
 
 .. code-block:: python
 
-    MMM_API_KEY = 'AJK7G5J2KL6JGJU7'    # A unique API key is provided to you with
-                                        # your Makemymails account. Keep this key safe.
+    MMM_API_KEY = 'AJK7G5J2KL6JGJU7'    # Your unique Api key.
     DEVICE_ID = '18'                    # A unique device id is assigned to each of your
                                         # device associated with your makemymails web account
-                                        # You can see devide id for all id's the api details page above.
+                                        # You can see devide id for all devices on the api details page on makemymails.
     receiver = '9876534210'             # Substitute accordingly.
 
     msg = 'This is a test sms from Makemymails SMS free API'
@@ -51,8 +58,9 @@ You can use import the *sendsms* function from makemymails after installing this
 Requirements
 -------------
 
-- Android Phone must be connected to internet at all times
-- Sim on the android phone for sending messages.
+* Android Phone must be connected to internet at all times
+
+* Sim on the android phone for sending messages.
 
 
 Warning
