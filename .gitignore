@@ -2,3 +2,4 @@
 build/
 dist/
 makemymails.egg-info/
+*.pyc

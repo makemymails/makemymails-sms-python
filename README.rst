@@ -41,6 +41,9 @@ You can use import the *sendsms* function from makemymails after installing this
     receiver = '9876534210'
     msg = 'This is a test sms from Makemymails SMS free API'
     from makemymails import sendsms
+
+    # If your phone is connected to the internet when this call is made message is
+    # sent immediately else it is queued and sent.
     sendsms(send_to=receiver, sms_body=msg, MMM_API_KEY, DEVICE_ID)
 
 
