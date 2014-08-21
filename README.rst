@@ -12,6 +12,8 @@ Quickstart
 Installing library
 ------------------
 
+.. code-block:: bash
+
     git clone git@github.com:makemymails/makemymails-sms-python.git
     cd makemymails-sms-python
     sudo python setup.py install
@@ -45,7 +47,7 @@ You can use import the *sendsms* function from makemymails after installing this
     DEVICE_ID = '18'                    # A unique device id is assigned to each of your
                                         # device associated with your makemymails web account
                                         # You can see devide id for all devices on the api details page on makemymails.
-    receiver = '9876534210'             # Substitute accordingly.
+    receiver = '9876534210'             # Add receiver number as a string
 
     msg = 'This is a test sms from Makemymails SMS free API'
     from makemymails import sendsms
@@ -66,7 +68,7 @@ Requirements
 Warning
 -------
 Warning: Api calls you make cause sms to be sent via your android phone,
-please make sure you install an sms pack before sending sms.
+please make sure you install an sms pack/plan before sending sms.
 
 
 .. _[1]: http://www.makemymails.com/accounts/signup/
